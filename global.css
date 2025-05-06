@@ -1,0 +1,24 @@
+        /* Custom styles */
+        .container {
+            height: 100vh; /* Full viewport height */
+        }
+        .button-minku {
+            background-color: #638373;
+            color:white;
+        }
+        .button-minku:hover {
+            background-color: #4d6b5c;
+            color:white;
+        }
+        .custom-range::-webkit-slider-thumb{
+            background: #000000;
+        }
+        .custom-range::-webkit-slider-runnable-track{
+            background: #a3a3a3;
+        }
+        .button-border{
+            border:0.5em solid #ffc6b0!important;
+        }
+        .input-border{
+            border:0.1em solid #ffc6b0!important;
+        }

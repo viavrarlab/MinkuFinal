@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Minku App</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+
+        <div class="container d-flex flex-column mb-3 justify-content-center align-items-center bg-image"
+        style="background-image: url('side-wave_background.png');
+          background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+            height: 100vh">
+            <div class="mt-auto">
+                <div class="d-flex flex-column mt-auto mb-4 rounded" style="background-color:#fffaf5;">
+                    <div class="d-flex flex-row">
+                        <div class="px-4"><h3>Mērījums ir veikts</h3></div>
+                        <div class="px-4 align-items-center"><i class="mx-2 bi bi-emoji-frown" style="font-size: 3rem;"></i></div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="px-4"><p style="color:red">Ir konstatētas stājas izmaiņas</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-auto mb-4 d-flex flex-column justify-content-center">
+                <h3 class="px-4 mb-4">Aicinām sazināties ar fizioterapeitu vai aplūkot mūsu piedāvājumu.</h3>
+                <button class="btn button-minku" type="button" onclick="location.replace('appview_6.html')">Turpināt</button>
+            </div>
+        </div>
+
+    <!-- Bootstrap 5 JavaScript (optional, needed for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+</html>
