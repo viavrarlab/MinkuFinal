@@ -1,4 +1,8 @@
         /* Custom styles */
+        body {
+            margin: 0;
+            height: 100vh;
+        }
         .container {
             height: 100vh; /* Full viewport height */
         }
