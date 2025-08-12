@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Minku App</title>
-    
+
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="global.css">
 </head>
+
 <body>
 
-    <div class="container d-flex flex-column mb-3 justify-content-center align-items-center bg-image"
-        style="background-image: url('side-wave_background.png');
-          background-repeat: no-repeat;
-            background-attachment: fixed; 
-            background-size: 100% 100%;
+    <div class="container d-flex flex-column mb-3 justify-content-center align-items-center" style="background-color: #ffc87b;
                height: 100vh">
-               <div class="mt-auto">
-                    <img src="minku_logo.png">
-               </div>
-               <div class="mt-auto pb-5 mb-4 d-flex flex-column justify-content-center">
-                    <p class="text-center">Turpinot lietot lietotni Jūs piekrītat lietošanas noteikumiem un nosacījumiem</p>
-                    <button class="btn button-minku" type="button" onclick="location.replace('appview_2.html')">Turpināt</button>
-               </div>
+        <div class="mt-auto">
+            <img src="minku_logo.svg">
+        </div>
+        <div class="mt-auto">
+            <p class="p-big">Palīgs vecākiem.</p>
+            <p class="p-big">Prieks bērniem.</p>
+            <p class="p-big">Veselība visiem.</p>
+        </div>
+        <div class="mt-auto pb-5 mb-4 d-flex flex-column justify-content-center">
+            <div class="d-flex flex-column align-items-center">
+                <button class="btn button-minku d-flex justify-content-between align-items-center" type="button" onclick="location.replace('appview_2.html')">
+                        <div class="mx-auto">Sākt</div>
+                </button>
+            </div>
+            <p class="text-center text-regular_400 pt-5">Turpinot lietot lietotni Jūs piekrītat Minku app
+                <span style="font-weight: 600; color: #8418c8;">lietošanas noteikumiem</span> un
+                <span style="font-weight: 600; color: #8418c8;">privātuma politikai</span>
+            </p>
+        </div>
     </div>
 
     <!-- Bootstrap 5 JavaScript (optional, needed for interactive components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

@@ -2,27 +2,198 @@
         body {
             margin: 0;
             height: 100vh;
+            font-family: "DM Sans", sans-serif;
+            ;
         }
+
         .container {
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
+            /* Full viewport height */
         }
-        .button-minku {
-            background-color: #638373;
-            color:white;
+
+        .button-minku, .button-minku:focus, .button-minku:active {
+            background-color: #8418C3;
+            color: white;
+            border-radius: 30px;
+            height: 60px;
+            width: 233px;
+            font-family: DM Sans;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: center;
+
         }
-        .button-minku:hover {
-            background-color: #4d6b5c;
-            color:white;
-        }
-        .custom-range::-webkit-slider-thumb{
+
+ 
+
+        .custom-range::-webkit-slider-thumb {
             background: #000000;
         }
-        .custom-range::-webkit-slider-runnable-track{
+
+        .custom-range::-webkit-slider-runnable-track {
             background: #a3a3a3;
         }
-        .button-border{
-            border:0.5em solid #ffc6b0!important;
+
+        .button-border {
+            border: 0.5em solid #ffc6b0 !important;
         }
-        .input-border{
-            border:0.1em solid #ffc6b0!important;
+
+        .input-border {
+            border: 0.1em solid #ffc6b0 !important;
+        }
+
+        .text-semi_bold_600 {
+            font-weight: 600;
+            color: #474747;
+            line-height: 44px;
+        }
+
+        .text-regular_400 {
+            font-weight: 400;
+            color: #474747;
+            line-height: 20px;
+            font-size: 14px;
+        }
+
+        .menu_button {
+            background: url('minku_menu.svg') no-repeat right center;
+            height: 32px;
+            width: 32px;
+            padding-right: 30px;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .button-minku-container {
+            position: fixed;
+            bottom: 10%;
+        }
+
+        .bottom-bar-buttons {
+            width: 33%;
+            cursor: pointer;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 23px;
+            width: 23px;
+            margin: 0 3%;
+            background-color: #F3E8F9;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #8418C3;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            position: relative;
+            padding: 10%;
+            overflow: hidden;
+        }
+
+        .minku-vector-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .minku-app-logo {
+            position: absolute;
+            display: flex;
+            top: 10%
+        }
+
+        .minku-app-logo>img {
+            max-width: 100%;
+
+        }
+
+        .background-vector {
+            max-width: 100%;
+        }
+
+        .content {
+            position: relative;
+        }
+
+        .minku-fixed {
+            position: absolute;
+            bottom: 10%;
+            /* always 10px from bottom of parent */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .minku-input {
+            background-color: #F3E8F9;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 20px;
+            text-align: center;
+            line-height: 35px;
+            letter-spacing: 0%;
+            color: #8418C3;
+        }
+
+        .minku-select {
+            background-image: url("select_circle.svg");
+            background-size: 35px auto;
+            background-color: #F3E8F9;
+            font-family: DM Sans;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 20px;
+            text-align: center;
+            line-height: 35px;
+            letter-spacing: 0%;
+            color: #8418C3;
+        }
+
+        .p-small {
+            font-family: DM Sans;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+
+            line-height: 35px;
+            letter-spacing: 0%;
+
+        }
+
+        .p-bold {
+            font-family: DM Sans;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 14px;
+            line-height: 35px;
+            letter-spacing: 0%;
+
+        }
+
+        .p-big {
+            font-family: DM Sans;
+            font-weight: 600;
+            font-style: Medium;
+            font-size: 25px;
+            color: #474747;
+
+            line-height: 44px;
+            letter-spacing: 0%;
+            text-align: center;
+
         }
