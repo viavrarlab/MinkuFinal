@@ -154,10 +154,6 @@
 </html>
 <script>
 
-    $(function () {
-        $("#appbar").load("appbar.html");
-        $("#bottombar").load("bottombar.html");
-    });
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -173,10 +169,12 @@
         if (t.val() == 1) {
             $("#gender_vector").attr("src", "vector_girl.svg");
             $("#gender_image").attr("src", "girl.svg");
+            sessionStorage.setItem("global_gender", 1);
         }
         else {
             $("#gender_vector").attr("src", "vector_boy.svg");
             $("#gender_image").attr("src", "boy.svg");
+            sessionStorage.setItem("global_gender", 0);
         }
 
     }
@@ -203,6 +201,9 @@
         console.log(slideIndex);
     } );
     $(document).ready(function () {
-        currentSlide(slideIndex)
+        $("#appbar").load("appbar.html");
+        $("#bottombar").load("bottombar.html");
+        currentSlide(slideIndex);
+        sessionStorage.setItem("global_gender", 0);
     });
 </script>

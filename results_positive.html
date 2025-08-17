@@ -1,0 +1,42 @@
+<div class="slideshow-container d-flex flex-column justify-content-center align-items-center">
+  <div style="font-weight: 700; color: #8418c8;font-size: 30px;text-align: center;">
+    <p>Rezultāts</p>
+  </div>
+  <div class="minku-vector-container-results">
+    <img class="background-vector" src="vector_boy.svg">
+    <div class="minku-app-logo-results"><img src="boy.svg"></div>
+    <img class="result-icon" src="result_positive.svg">
+  </div>
+  <div style="text-align: left;">
+    <br>
+    <p class="p-small p-bold">Rezultāts:</p>
+    <p class="p-small" style="line-height: 20px;">
+      Rezultāts:
+      Bērns stāv ar taisnu muguru, pleci ir viegli atbrīvoti un pavērsti nedaudz atpakaļ, galva turas taisni virs
+      pleciem (neizvirzās uz priekšu), vēders ir viegli ievilkts, svars vienmērīgi sadalīts uz abām kājām. Šāda stāja
+      palīdz elpot dziļāk, uzlabo koncentrēšanos un mazina muguras pārslodzi.
+    </p>
+    <p class="p-small p-bold" style="color:#8418c8">Rekomendācija:</p>
+    <p class="p-small" style="color:#8418c8;line-height: 20px;">
+      Veicināt ikdienas kustības, vingrinājumus, kas stiprina korsetes muskuļus (muguru, vēderu, plecus), un pievērst
+      uzmanību bērna sēdēšanas un stāvēšanas paradumiem gan mājās, gan skolā.</p>
+  </div>
+</div>
+<div class="minku-fixed">
+  <div class="d-flex flex-column">
+    <div class="p-2 align-self-center" style="text-align:center">
+      <button class="btn button-minku d-flex align-items-center justify-content-between" onclick="location.replace('whatsapp.html')" id="minku-next" type="button">
+        <div class="mx-auto">Nākamais</div><img src="arrow_right.svg">
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+    $(document).ready(function () {
+      var global_gender = sessionStorage.getItem("global_gender");
+      if (global_gender == 1){
+        $(".background-vector").attr("src", "vector_girl.svg");
+        $("#results_gender").attr("src", "girl.svg");
+      }
+    });
+</script>
