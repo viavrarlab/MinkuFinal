@@ -29,11 +29,27 @@
 
 </html>
 <script>
-
+    function get_results() {
+        const params = new URLSearchParams(window.location.search);
+        var results = JSON.parse(atob(params.get("results")));
+        let okValues = Object.values(results).map(axis => axis.ok);
+        for (let value of okValues) {
+            if (!value) {
+                return 0;
+                break;
+            }
+        }
+        return 1;
+    }
 
     $(document).ready(function () {
+        if (get_results()) {
+            $("#content").load("results_positive.html");
+        }
+        else {
+            $("#content").load("results_negative.html");
+        }
         $("#appbar").load("appbar.html");
-        $("#content").load("results_negative.html");
         $("#bottombar").load("bottombar.html");
     });
 </script>
