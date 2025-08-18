@@ -19,10 +19,8 @@
 <body>
     <div id="appbar"></div>
     <div id="content">
-        <div class="slideshow-container d-flex flex-column ">
-
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides">
+        <div class="slideshow-container d-flex flex-column">
+            <div class="mySlides flex-column align-items-center">
                 <div style="font-weight: 700; color: #8418c8;font-size: 30px;text-align: center;">
                     <p>Kas ir Minku app?</p>
                 </div>
@@ -39,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="mySlides">
+            <div class="mySlides flex-column align-items-center">
                 <div style="font-weight: 700; color: #8418c8;font-size: 30px;text-align: center;">
                     <p>Kā tiek veikts mērijums?</p>
                 </div>
@@ -87,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="mySlides">
+            <div class="mySlides flex-column align-items-center">
                 <div style="font-weight: 700; color: #8418c8;font-size: 30px;text-align: center;">
                     <p>Bērna parametri</p>
                 </div>
@@ -192,7 +190,7 @@
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].style.display = "flex";
         dots[slideIndex - 1].className += " active";
     }
     $( "#minku-next" ).on( "click", function() {
