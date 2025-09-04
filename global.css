@@ -193,7 +193,6 @@
         .minku-fixed {
             position: absolute;
             bottom: 10%;
-            /* always 10px from bottom of parent */
             left: 50%;
             transform: translateX(-50%);
         }
@@ -261,18 +260,33 @@
             display: none;
         }
 
+        .upper-text {
+            font-weight: 700;
+            color: #8418c8;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
         @media only screen and (max-height: 700px) {
+            .slideshow-container {
+                width: 100%;
+                position: relative;
+                padding: 5% 10% 10% 10%;
+                overflow: hidden;
+            }
+
             .minku-vector-container {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                max-width: 50%;
+                max-width: 30%;
             }
 
             .minku-vector-container-results {
                 position: relative;
-                max-width: 50%;
+                max-width: 30%;
             }
 
             .dot {
@@ -295,10 +309,49 @@
                 font-family: DM Sans;
                 font-weight: 500;
                 font-style: Medium;
-                font-size: 14px;
+                font-size: 0.7em;
                 margin-bottom: 0px;
                 line-height: 25px;
                 letter-spacing: 0%;
 
+            }
+
+            .result-icon {
+                position: absolute;
+                top: 20%;
+                left: 90%;
+                transform: translate(-50%, -50%);
+                max-width: 30%;
+            }
+
+            .button-minku,
+            .button-minku:focus,
+            .button-minku:active {
+                background-color: #8418C3;
+                color: white;
+                border-radius: 30px;
+                height: 40px;
+                width: 155px;
+                font-family: DM Sans;
+                font-weight: 700;
+                font-style: Bold;
+                font-size: 15px;
+                line-height: 15px;
+                letter-spacing: 0%;
+                text-align: center;
+
+            }
+
+            .minku-fixed {
+                position: absolute;
+                bottom: 15%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .upper-text {
+                font-weight: 700;
+                color: #8418c8;
+                font-size: 22px;
+                text-align: center;
             }
         }

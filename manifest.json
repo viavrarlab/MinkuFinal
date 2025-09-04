@@ -1,0 +1,15 @@
+{
+  "name": "Minku App",
+  "short_name": "Minku",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8418C3",
+  "icons": [
+    {
+      "src": "ic_launcher.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
