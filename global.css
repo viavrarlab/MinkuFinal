@@ -13,7 +13,9 @@
 
         .button-minku,
         .button-minku:focus,
-        .button-minku:active {
+        .button-minku:active,
+        .button-minku:hover
+         {
             background-color: #8418C3;
             color: white;
             border-radius: 30px;
@@ -31,7 +33,8 @@
 
         .button-minku-round,
         .button-minku-round:focus,
-        .button-minku-round:active {
+        .button-minku-round:active,
+        .button-minku-round:hover {
             background-color: #8418C3;
             color: white;
             border-radius: 50%;
@@ -268,7 +271,7 @@
         }
 
 
-        @media only screen and (max-height: 730px) {
+        @media only screen and (max-height: 750px) {
             .slideshow-container {
                 width: 100%;
                 position: relative;
