@@ -1,13 +1,13 @@
         /* Custom styles */
         body {
             margin: 0;
-            height: 100vh;
+            height: 100dvh;
             font-family: "DM Sans", sans-serif;
             ;
         }
 
         .container {
-            height: 100vh;
+            height: 100dvh;
             /* Full viewport height */
         }
 
