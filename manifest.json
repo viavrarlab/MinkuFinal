@@ -1,9 +1,9 @@
 {
   "name": "Minku App",
   "short_name": "Minku",
-  "start_url": "/MinkuFinal/?standalone=true",
+  "start_url": "/MinkuFinal/?fullscreen=true",
   "scope": "/MinkuFinal/",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#ffffff",
   "theme_color": "#8418C3",
   "icons": [
