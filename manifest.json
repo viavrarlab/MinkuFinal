@@ -1,7 +1,7 @@
 {
   "name": "Minku App",
   "short_name": "Minku",
-  "start_url": "/MinkuFinal/",
+  "start_url": "/MinkuFinal/?standalone=true",
   "scope": "/MinkuFinal/",
   "display": "standalone",
   "background_color": "#ffffff",

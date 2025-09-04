@@ -268,7 +268,7 @@
         }
 
 
-        @media only screen and (max-height: 700px) {
+        @media only screen and (max-height: 730px) {
             .slideshow-container {
                 width: 100%;
                 position: relative;
@@ -281,12 +281,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                max-width: 30%;
+                max-width: 50%;
             }
 
             .minku-vector-container-results {
                 position: relative;
-                max-width: 30%;
+                max-width: 50%;
             }
 
             .dot {
@@ -353,5 +353,19 @@
                 color: #8418c8;
                 font-size: 22px;
                 text-align: center;
+            }
+        }
+        @media only screen and (max-height: 700px) {
+            .minku-vector-container {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 30%;
+            }
+
+            .minku-vector-container-results {
+                position: relative;
+                max-width: 30%;
             }
         }
