@@ -4,10 +4,10 @@
   </div>
   <div class="minku-vector-container-results">
     <img class="background-vector" src="vector_boy.svg">
-    <div class="minku-app-logo-results"><img src="boy.svg"></div>
+    <div class="minku-app-logo-results"><img src="boy_happy.svg"></div>
     <img class="result-icon" src="result_positive.svg">
   </div>
-  <div style="text-align: left;">
+  <div style="text-align: left;" class="results-text">
     <p class="p-small p-bold">Rezultāts:</p>
     <p class="p-small" style="line-height: 20px;">
       Rezultāts:
@@ -35,7 +35,7 @@
       var global_gender = sessionStorage.getItem("global_gender");
       if (global_gender == 1){
         $(".background-vector").attr("src", "vector_girl.svg");
-        $("#results_gender").attr("src", "girl.svg");
+        $("#results_gender").attr("src", "girl_happy.svg");
       }
     });
 </script>

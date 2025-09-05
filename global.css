@@ -14,8 +14,7 @@
         .button-minku,
         .button-minku:focus,
         .button-minku:active,
-        .button-minku:hover
-         {
+        .button-minku:hover {
             background-color: #8418C3;
             color: white;
             border-radius: 30px;
@@ -270,6 +269,10 @@
             text-align: center;
         }
 
+        .minku-left-logo {
+            width: 139px;
+        }
+
 
         @media only screen and (max-height: 750px) {
             .slideshow-container {
@@ -351,6 +354,7 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
+
             .upper-text {
                 font-weight: 700;
                 color: #8418c8;
@@ -358,6 +362,7 @@
                 text-align: center;
             }
         }
+
         @media only screen and (max-height: 700px) {
             .minku-vector-container {
                 position: relative;
@@ -370,5 +375,56 @@
             .minku-vector-container-results {
                 position: relative;
                 max-width: 30%;
+            }
+        }
+
+        @media only screen and (max-height: 600px) {
+            .menu_button {
+                background: url('minku_menu.svg') no-repeat center center;
+                height: 20px;
+                width: 20px;
+                padding-right: 30px;
+                background-size: contain;
+            }
+
+            .bottom-bar-buttons img {
+                width: 25%;
+                cursor: pointer;
+            }
+
+            .minku-left-logo {
+                width: 100px;
+            }
+
+            .p-small {
+                font-family: DM Sans;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 0.7em;
+                margin-bottom: 0px;
+                line-height: 18px;
+                letter-spacing: 0%;
+
+            }
+
+            .measurement-rules img {
+                width: 50%;
+            }
+
+            .pt-3 {
+                padding-top: 0.5rem !important;
+            }
+
+            .upper-text {
+                font-weight: 700;
+                color: #8418c8;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .results-text {
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: 150px;
             }
         }
