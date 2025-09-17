@@ -1,41 +1,91 @@
-<div class="slideshow-container d-flex flex-column justify-content-center align-items-center">
+<div class="slideshow-container d-flex flex-column align-items-center">
   <div class="upper-text">
     <p>Rezultāts</p>
   </div>
   <div class="minku-vector-container-results">
     <img class="background-vector" src="vector_boy.svg">
-    <div class="minku-app-logo-results"><img src="boy_happy.svg"></div>
+    <div class="minku-app-logo-results"><img id="results_gender" src="boy_happy.svg"></div>
     <img class="result-icon" src="result_positive.svg">
   </div>
   <div style="text-align: left;" class="results-text">
-    <p class="p-small p-bold">Rezultāts:</p>
-    <p class="p-small" style="line-height: 20px;">
-      Rezultāts:
-      Bērns stāv ar taisnu muguru, pleci ir viegli atbrīvoti un pavērsti nedaudz atpakaļ, galva turas taisni virs
-      pleciem (neizvirzās uz priekšu), vēders ir viegli ievilkts, svars vienmērīgi sadalīts uz abām kājām. Šāda stāja
-      palīdz elpot dziļāk, uzlabo koncentrēšanos un mazina muguras pārslodzi.
-    </p>
-    <p class="p-small p-bold" style="color:#8418c8">Rekomendācija:</p>
-    <p class="p-small" style="color:#8418c8;line-height: 20px;">
-      Veicināt ikdienas kustības, vingrinājumus, kas stiprina korsetes muskuļus (muguru, vēderu, plecus), un pievērst
-      uzmanību bērna sēdēšanas un stāvēšanas paradumiem gan mājās, gan skolā.</p>
-  </div>
-</div>
-<div class="minku-fixed">
-  <div class="d-flex flex-column">
-    <div class="p-2 align-self-center" style="text-align:center">
-      <button class="btn button-minku d-flex align-items-center justify-content-between" onclick="location.replace('whatsapp.html')" id="minku-next" type="button">
-        <div class="mx-auto">Nākamais</div><img src="arrow_right.svg">
-      </button>
+    <div class="container-fluid">
+      <div class="row pt-3">
+        <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+          <img class="pt-2" src="positive_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small p-bold p-positive">Rezultāts:</p>
+          <p class="p-small p-positive" style="line-height: 20px;">
+            Viss kārtībā - turpini rūpēties par bērna veselīgu dzīvesveidu!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="color:#8418c8">
+      <div class="row pt-2">
+        <div class="col-3">
+          <p class="p-small p-bold" style="color:#8418c8">Rekomendācija:</p>
+        </div>
+        <div class="col-9">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Apmeklē regulāras profilaktiskās vingrošanas nodarbības
+          </p>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Nodrošini aktīvu dzīvesveidu svaigā gaisā.un kvalificētu fizioterapeitu
+          </p>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Nodrošini bērnam aktīvu dzīvesveidu svaigā gaisā
+          </p>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column  justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Dažādo kustību
+          </p>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+          <button class="btn button-minku d-flex align-items-center justify-content-between"
+            onclick="location.replace('whatsapp.html')" id="minku-next" type="button">
+            <div class="mx-auto">Nākamais</div><img src="arrow_right.svg">
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <script>
-    $(document).ready(function () {
-      var global_gender = sessionStorage.getItem("global_gender");
-      if (global_gender == 1){
-        $(".background-vector").attr("src", "vector_girl.svg");
-        $("#results_gender").attr("src", "girl_happy.svg");
-      }
-    });
+  $(document).ready(function () {
+    var global_gender = sessionStorage.getItem("global_gender");
+    if (global_gender == 1) {
+      $(".background-vector").attr("src", "vector_girl.svg");
+      $("#results_gender").attr("src", "girl_happy.svg");
+    }
+  });
 </script>

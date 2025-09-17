@@ -1,13 +1,29 @@
 <nav class="bottom-bar navbar d-flex align-items-center" style="background-color: #ffc87b;z-index: 1;">
 
-      <div class="button bottom-bar-buttons d-flex justify-content-center p-2">
-        <img src="home_icon.svg">
-      </div>
-      <div class="button bottom-bar-buttons d-flex justify-content-center p-2">
-        <img src="measure_icon.svg">
-      </div>
-      <div class="button bottom-bar-buttons d-flex justify-content-center p-2">
-        <img src="whatsapp_icon.svg">
-      </div>
+  <div class="button bottom-bar-buttons d-flex justify-content-center p-2" onclick="show_page($(this),1)">
+    <img src="home_icon.svg">
+  </div>
+  <div class="button bottom-bar-buttons d-flex justify-content-center p-2" onclick="show_page($(this),2)">
+    <img src="measure_icon.svg">
+  </div>
+  <div class="button bottom-bar-buttons d-flex justify-content-center p-2" onclick="show_page($(this),3)">
+    <img src="whatsapp_icon.svg">
+  </div>
 
 </nav>
+<script>
+  function show_page(t, i) {
+
+    switch (i) {
+      case 1:
+        location.replace('appview_2.html');
+        break;
+      case 2:
+        location.replace('https://viavrarlab.github.io/MinkuAppWeb?forwardResultsTo=https://viavrarlab.github.io/MinkuFinal/results.html');
+        break;
+      case 3:
+        location.replace('whatsapp.html');
+        break;
+    }
+  }
+</script>

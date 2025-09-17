@@ -21,34 +21,32 @@
 <body>
     <div id="appbar"></div>
     <div id="content">
-        <div class="slideshow-container d-flex flex-column justify-content-center align-items-center">
+        <div class="slideshow-container d-flex flex-column align-items-center">
             <div class="upper-text">
                 <p>Pievienojies Minku app
                     Whatsapp grupai!</p>
             </div>
             <div class="minku-vector-container">
-                <img class="background-vector" src="vector_boy.svg">
-                <div class="minku-app-logo"><img src="whatsapp_logo.svg"></div>
+                <img class="background-vector" src="minku_vector.svg">
+                <div class="minku-whatsapp-logo"><img src="whatsapp_logo.svg"></div>
             </div>
             <div style="text-align: center;">
-                <br>
                 <p class="p-small p-bold" style="color:#8418c8">Pievienojies mūsu Whatsapp grupai!</p>
                 <p class="p-small" style="line-height: 20px;">
                     Grupa vecākiem un speciālistiem bērna stājas mērīšanas lietotnes lietošanai – padomi, atgādinājumi
                     un atbalsts bērna stājas uzlabošanai.
                 </p>
             </div>
-        </div>
-        <div class="minku-fixed">
-            <div class="d-flex flex-column">
+                        <div class="d-flex flex-column">
                 <div class="p-2 align-self-center" style="text-align:center">
                     <button class="btn button-minku d-flex align-items-center justify-content-between"
-                        onclick="location.replace('whatsapp_rules.html')" id="minku-next" type="button">
-                        <div class="mx-auto">Pievienoties</div><img src="add.svg">
+                        onclick="" id="minku-next" type="button">
+                        <div class="mx-1">Pievienoties</div><img src="add.svg">
                     </button>
                 </div>
             </div>
         </div>
+
     </div>
     <div id="bottombar"></div>
 
@@ -61,6 +59,9 @@
 
     $(document).ready(function () {
         $("#appbar").load("appbar.html");
-        $("#bottombar").load("bottombar.html");
+        $("#bottombar").load("bottombar.html", function () {
+            $(".bottom-bar").addClass('bottom-bar-button_active_3');
+
+        });
     });
 </script>

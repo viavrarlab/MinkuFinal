@@ -121,6 +121,9 @@
     }
     $(document).ready(function () {
         $("#appbar").load("appbar.html");
-        $("#bottombar").load("bottombar.html");
+            $("#bottombar").load("bottombar.html", function () {
+            $(".bottom-bar").addClass('bottom-bar-button_active_3');
+
+        });
     });
 </script>

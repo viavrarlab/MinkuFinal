@@ -1,5 +1,5 @@
-<div class="slideshow-container d-flex flex-column justify-content-center align-items-center">
-  <div class="upper-text">
+<div class="slideshow-container d-flex flex-column align-items-center">
+        <div class="upper-text">
     <p>Rezultāts</p>
   </div>
   <div class="minku-vector-container-results">
@@ -8,34 +8,88 @@
     <img class="result-icon" src="result_negative.svg">
   </div>
   <div style="text-align: left;" class="results-text">
-    <p class="p-small p-bold">Rezultāts:</p>
-    <p class="p-small" style="line-height: 20px;">
-      Bērnam stāvot, pleci ir pavērsti uz priekšu, galva izbīdīta uz priekšu, mugura veido apaļu
-      izliekumu (it īpaši augšdaļā), un vēders var būt nedaudz izbīdīts uz āru. Ilgstoši saglabājot
-      šādu pozīciju, var rasties sāpes mugurā, nogurums un koncentrēšanās grūtības.
-    </p>
-    <p class="p-small p-bold" style="color:#8418c8">Rekomendācija:</p>
-    <p class="p-small" style="color:#8418c8;line-height: 20px;">
-      Apmeklēt fizioterapeitu. Ikdienā mudināt bērnu stāvēt un sēdēt taisni, regulāri mainīt pozas,
-      veikt stiepšanās un muguras muskuļu stiprināšanas vingrinājumus, kā arī samazināt laiku, ko
-      bērns pavada skatoties ekrānā ar noliektu galvu.</p>
-  </div>
-</div>
-<div class="minku-fixed">
-  <div class="d-flex flex-column">
-    <div class="p-2 align-self-center" style="text-align:center">
-      <button class="btn button-minku d-flex align-items-center justify-content-between" onclick="location.replace('whatsapp.html')" id="minku-next" type="button">
-        <div class="mx-auto">Nākamais</div><img src="arrow_right.svg">
-      </button>
+    <div class="container-fluid">
+      <div class="row pt-3">
+        <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+          <img class="pt-2" src="negative_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small p-bold p-negative">Rezultāts:</p>
+          <p class="p-small p-negative" style="line-height: 20px;">
+            Pievērs uzmanību sava bērna veselības stāvoklim!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="color:#8418c8">
+      <div class="row pt-2">
+        <div class="col-3">
+          <p class="p-small p-bold" style="color:#8418c8">Rekomendācija:</p>
+        </div>
+        <div class="col-9">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Konsultējies ar kvalificētu fizioterapeitu
+          </p>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Izmanto ārstniecisko vingrošanu
+          </p>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Ierobežo ilgstošu viedierīču lietošanu
+          </p>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-3 d-flex flex-column justify-content-start align-items-center">
+          <img src="recommend_symbol.svg">
+        </div>
+        <div class="col-9">
+          <p class="p-small" style="line-height: 20px;">
+            Motivē bērnu neatrasties ilgstošās piespiedu pozās
+          </p>
+        </div>
+      </div>
+
+      <div class="row pt-2">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+          <button class="btn button-minku d-flex align-items-center justify-content-between"
+            onclick="location.replace('whatsapp.html')" id="minku-next" type="button">
+            <div class="mx-auto">Nākamais</div><img src="arrow_right.svg">
+          </button>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+
 <script>
-    $(document).ready(function () {
-      var global_gender = sessionStorage.getItem("global_gender");
-      if (global_gender == 1){
-        $(".background-vector").attr("src", "vector_girl.svg");
-        $("#results_gender").attr("src", "girl_sad.svg");
-      }
-    });
+  $(document).ready(function () {
+    var global_gender = sessionStorage.getItem("global_gender");
+    if (global_gender == 1) {
+      $(".background-vector").attr("src", "vector_girl.svg");
+      $("#results_gender").attr("src", "girl_sad.svg");
+    }
+  });
 </script>

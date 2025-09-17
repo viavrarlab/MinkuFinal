@@ -19,12 +19,13 @@
 </head>
 
 <body>
-    <div id="appbar"></div>
+       <div class="d-flex flex-column">
+            <div id="appbar"></div>
     <div id="content">
     </div>
     <div id="bottombar"></div>
 
-
+       </div>
 </body>
 
 </html>
@@ -35,7 +36,7 @@
         let okValues = Object.values(results).map(axis => axis.ok);
         for (let value of okValues) {
             if (!value) {
-                return 0;
+                return 1;
                 break;
             }
         }
@@ -50,6 +51,9 @@
             $("#content").load("results_negative.html");
         }
         $("#appbar").load("appbar.html");
-        $("#bottombar").load("bottombar.html");
+        $("#bottombar").load("bottombar.html", function () {
+            $(".bottom-bar").addClass('bottom-bar-button_active_2');
+
+        });
     });
 </script>

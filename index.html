@@ -23,31 +23,33 @@
 
 <body>
     <div id="allowed-content" style="display: none;">
-        <div class="container d-flex flex-column mb-3 justify-content-center align-items-center" style="background-color: #ffc87b;
+        <div class="container d-flex flex-column pt-5 justify-content-center align-items-center" style="background-color: #ffc87b;
                height: 100vh">
-            <div class="mt-auto">
-                <img src="minku_logo.svg">
-            </div>
-            <div class="mt-auto">
+     
+            <div class=" d-flex flex-column align-items-center pt-3">
+                <img class="pb-5 minku-main-logo" src="minku_logo.svg">
                 <p class="p-big">Palīgs vecākiem.</p>
                 <p class="p-big">Prieks bērniem.</p>
                 <p class="p-big">Veselība visiem.</p>
             </div>
-            <div class="mt-auto pb-5 mb-4 d-flex flex-column justify-content-center">
-                <div class="d-flex flex-column align-items-center">
-                    <button class="btn button-minku d-flex justify-content-between align-items-center" type="button"
+            <div class="d-flex flex-column justify-content-center">
+                <div class="d-flex flex-column align-items-center py-4">
+                    <button class="btn button-minku d-flex justify-content-between align-items-center" style="width: 40%;" type="button"
                         onclick="location.replace('appview_2.html')">
                         <div class="mx-auto">Sākt</div>
                     </button>
                 </div>
-                <p class="text-center text-regular_400 pt-5">Turpinot lietot lietotni Jūs piekrītat Minku app
-                    <span style="font-weight: 600; color: #8418c8;">lietošanas noteikumiem</span>
+                <p class="text-center text-regular_400 pt-4">Turpinot lietot lietotni Jūs piekrītat Minku app
+                    <a href="whatsapp_rules.html"><span style="font-weight: 600; color: #8418c8;">lietošanas noteikumiem</span></a>
                 </p>
             </div>
         </div>
     </div>
     <div id="not-allowed-content">
-        <p class="p-big">Aicinām izmantot Minku App, pieejamu gan Android, gan iOS!</p>
+        <p class="p-big">Lai sāktu izmantot Minkü bērnu stājas diagnostikas aplikāciju, lūdzu, atveriet to savā mobilajā ierīcē.</p>
+               <div class="d-flex flex-column align-items-center">
+                <img src="minku_app_logo.svg">
+            </div>
     </div>
     <!-- Bootstrap 5 JavaScript (optional, needed for interactive components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

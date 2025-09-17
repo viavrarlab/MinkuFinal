@@ -1,25 +1,39 @@
         /* Custom styles */
+        html {
+            height: 100%;
+        }
+
         body {
             margin: 0;
-            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             font-family: "DM Sans", sans-serif;
-            ;
+            overflow: hidden;
         }
 
         .container {
-            height: 100dvh;
-            /* Full viewport height */
+            height: 100%;
+
+        }
+
+        .minku-main-logo {
+            max-width: 239px;
+            width: 100%;
         }
 
         .button-minku,
         .button-minku:focus,
         .button-minku:active,
-        .button-minku:hover {
+        .button-minku:hover,
+        .button-minku:disabled {
             background-color: #8418C3;
             color: white;
             border-radius: 30px;
             height: 60px;
-            width: 233px;
+            max-height: 60px;
+            max-width: 233px;
+            width: 100%;
             font-family: DM Sans;
             font-weight: 700;
             font-style: Bold;
@@ -89,7 +103,7 @@
 
         #bottombar {
             overflow: hidden;
-            position: fixed;
+            position: sticky;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -114,6 +128,18 @@
             cursor: pointer;
         }
 
+        .bottom-bar-button_active_1 {
+            background: linear-gradient(to right, #FFD79F 0%, #FFD79F 33%, #ffc87b 33.33%, #ffc87b 66.66%, #ffc87b 66.66%, #ffc87b 100%);
+        }
+
+        .bottom-bar-button_active_2 {
+            background: linear-gradient(to right, #ffc87b 0%, #ffc87b 33%, #FFD79F 33.33%, #FFD79F 66.66%, #ffc87b 66.66%, #ffc87b 100%);
+        }
+
+        .bottom-bar-button_active_3 {
+            background: linear-gradient(to right, #ffc87b 0%, #ffc87b 33%, #ffc87b 33.33%, #ffc87b 66.66%, #FFD79F66.66%, #FFD79F 100%);
+        }
+
         .dot {
             cursor: pointer;
             height: 23px;
@@ -133,8 +159,10 @@
         .slideshow-container {
             width: 100%;
             position: relative;
-            padding: 10%;
+            padding: 5% 10% 0% 10%;
+            height: calc(100vh - 150px);
             overflow: hidden;
+            justify-content: space-evenly;
         }
 
         .minku-vector-container {
@@ -150,8 +178,13 @@
             max-width: 60%;
         }
 
-        .minku-app-logo,
-        .minku-app-logo-results {}
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
 
         .minku-app-logo>img {
             max-width: 55%;
@@ -161,11 +194,27 @@
             transform: translate(-50%, -50%);
         }
 
+        .minku-gender-logo>img {
+            max-width: 55%;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .minku-whatsapp-logo>img {
+            max-width: 55%;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         .minku-app-logo-results>img {
-            width: 30%;
+            width: 60%;
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 55%;
             transform: translate(-50%, -50%);
         }
 
@@ -177,7 +226,7 @@
         .result-icon {
             position: absolute;
             top: 20%;
-            left: 90%;
+            left: 95%;
             transform: translate(-50%, -50%);
         }
 
@@ -192,11 +241,16 @@
             position: relative;
         }
 
+        #content {
+            flex: 1;
+        }
+
         .minku-fixed {
-            position: absolute;
+            /* position: absolute;
             bottom: 10%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%);*/
+            height: 50%;
         }
 
         .minku-input {
@@ -237,7 +291,7 @@
 
         .p-bold {
             font-family: DM Sans;
-            font-weight: 700;
+            font-weight: 700 !important;
             font-style: Bold;
             font-size: 14px;
             line-height: 35px;
@@ -258,6 +312,14 @@
 
         }
 
+        .p-negative {
+            color: red;
+        }
+
+        .p-positive {
+            color: green;
+        }
+
         .read-more {
             display: none;
         }
@@ -273,86 +335,18 @@
             width: 139px;
         }
 
-
-        @media only screen and (max-height: 750px) {
-            .slideshow-container {
-                width: 100%;
-                position: relative;
-                padding: 5% 10% 10% 10%;
-                overflow: hidden;
-            }
-
+        @media only screen and (max-width: 600px) {
             .minku-vector-container {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                max-width: 50%;
+                max-width: 60%;
             }
 
             .minku-vector-container-results {
                 position: relative;
-                max-width: 50%;
-            }
-
-            .dot {
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 3%;
-                background-color: #F3E8F9;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.6s ease;
-            }
-
-            .active,
-            .dot:hover {
-                background-color: #8418C3;
-            }
-
-            .p-small {
-                font-family: DM Sans;
-                font-weight: 500;
-                font-style: Medium;
-                font-size: 0.7em;
-                margin-bottom: 0px;
-                line-height: 25px;
-                letter-spacing: 0%;
-
-            }
-
-            .result-icon {
-                position: absolute;
-                top: 20%;
-                left: 90%;
-                transform: translate(-50%, -50%);
-                max-width: 30%;
-            }
-
-            .button-minku,
-            .button-minku:focus,
-            .button-minku:active {
-                background-color: #8418C3;
-                color: white;
-                border-radius: 30px;
-                height: 40px;
-                width: 155px;
-                font-family: DM Sans;
-                font-weight: 700;
-                font-style: Bold;
-                font-size: 15px;
-                line-height: 15px;
-                letter-spacing: 0%;
-                text-align: center;
-
-            }
-
-            .minku-fixed {
-                position: absolute;
-                bottom: 15%;
-                left: 50%;
-                transform: translateX(-50%);
+                max-width: 40%;
             }
 
             .upper-text {
@@ -361,70 +355,179 @@
                 font-size: 22px;
                 text-align: center;
             }
+
+            .result-icon {
+                position: absolute;
+                top: 20%;
+                left: 95%;
+                transform: translate(-50%, -50%);
+                max-width: 30%;
+            }
         }
 
-        @media only screen and (max-height: 700px) {
+        @media only screen and (max-width: 440px) {
             .minku-vector-container {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                max-width: 30%;
+                max-width: 60%;
             }
 
             .minku-vector-container-results {
                 position: relative;
-                max-width: 30%;
-            }
-        }
-
-        @media only screen and (max-height: 600px) {
-            .menu_button {
-                background: url('minku_menu.svg') no-repeat center center;
-                height: 20px;
-                width: 20px;
-                padding-right: 30px;
-                background-size: contain;
+                max-width: 50%;
             }
 
-            .bottom-bar-buttons img {
-                width: 25%;
-                cursor: pointer;
-            }
-
-            .minku-left-logo {
-                width: 100px;
-            }
-
-            .p-small {
-                font-family: DM Sans;
-                font-weight: 500;
-                font-style: Medium;
-                font-size: 0.7em;
-                margin-bottom: 0px;
-                line-height: 18px;
-                letter-spacing: 0%;
-
-            }
-
-            .measurement-rules img {
-                width: 50%;
-            }
-
-            .pt-3 {
-                padding-top: 0.5rem !important;
+            .results-text {
+                transform: scale(0.8);
+                transform-origin: top center;
+                backface-visibility: hidden;
             }
 
             .upper-text {
                 font-weight: 700;
                 color: #8418c8;
-                font-size: 14px;
+                font-size: 20px;
                 text-align: center;
             }
 
+            .result-icon {
+                position: absolute;
+                top: 20%;
+                left: 95%;
+                transform: translate(-50%, -50%);
+                max-width: 30%;
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .minku-vector-container {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 50%;
+            }
+
+            .slideshow-container {
+                width: 100%;
+                position: relative;
+                padding: 5% 10% 0% 10%;
+                height: calc(100vh - 99px);
+                overflow: hidden;
+            }
+
+            .minku-vector-container-results {
+                position: relative;
+                max-width: 40%;
+            }
+
+            .upper-text {
+                font-weight: 700;
+                color: #8418c8;
+                font-size: 18px;
+                text-align: center;
+                line-height: 18px;
+            }
+
+            .result-icon {
+                position: absolute;
+                top: 20%;
+                left: 95%;
+                transform: translate(-50%, -50%);
+                max-width: 30%;
+            }
+
+            .minku-left-logo {
+                width: 80px;
+            }
+
+            .bottom-bar-buttons img {
+                width: 20%;
+                cursor: pointer;
+            }
+
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+            }
+
+            .button-minku,
+            .button-minku:focus,
+            .button-minku:active,
+            .button-minku:hover,
+            .button-minku:disabled {
+                font-size: 15px;
+                height: 40px;
+            }
+
+            .button-minku img,
+            .button-minku:focus img,
+            .button-minku:active img,
+            .button-minku:hover img,
+            .button-minku:disabled img {
+                width: 15px;
+            }
+
+            .p-small {
+                line-height: 20px;
+                font-size: 0.7em;
+            }
+
+            .measurement-rules img {
+                width: 100%;
+            }
+
+            .minku-app-logo>img {
+                max-width: 60%;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .minku-input {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .minku-select {
+                font-size: 12px;
+                line-height: 14px;
+                background-size: 25px;
+            }
+
+            .minku-gender-logo>img {
+                max-width: 35%;
+                position: absolute;
+                top: 45%;
+                left: 55%;
+                transform: translate(-50%, -50%);
+            }
+
+            .p-big {
+                font-size: 14px;
+                line-height: 34px;
+                margin: auto;
+            }
+
+            .minku-main-logo {
+                width: 70%;
+            }
+
             .results-text {
-                overflow-y: auto;
-                overflow-x: hidden;
-                height: 150px;
+                transform: scale(0.5);
+                transform-origin: top center;
+                backface-visibility: hidden;
+            }
+
+            .minku-whatsapp-logo>img {
+                max-width: 55%;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
