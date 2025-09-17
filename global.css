@@ -1,18 +1,22 @@
         /* Custom styles */
         html {
+            min-height: -webkit-fill-available;
             height: 100%;
         }
 
         body {
             margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            height: 100%;
             font-family: "DM Sans", sans-serif;
             overflow: hidden;
         }
 
         .container {
+            min-height: -webkit-fill-available;
             height: 100%;
 
         }
@@ -160,7 +164,7 @@
             width: 100%;
             position: relative;
             padding: 5% 10% 0% 10%;
-            height: calc(100vh - 150px);
+            height: calc(100vh - 144px);
             overflow: hidden;
             justify-content: space-evenly;
         }
@@ -373,7 +377,21 @@
                 align-items: center;
                 max-width: 60%;
             }
-
+            .slideshow-container {
+                width: 100%;
+                position: relative;
+                padding: 5% 10% 0% 10%;
+                overflow: hidden;
+                height: calc(100vh - 174px);
+            }
+            .button-minku,
+            .button-minku:focus,
+            .button-minku:active,
+            .button-minku:hover,
+            .button-minku:disabled {
+                font-size: 18px;
+                height: 50px;
+            }
             .minku-vector-container-results {
                 position: relative;
                 max-width: 50%;

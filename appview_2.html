@@ -16,6 +16,8 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="global.css">
+    <link rel="manifest" href="./manifest.json">
+    <script src="global_js.js"></script>
 </head>
 
 <body>
@@ -219,9 +221,10 @@
         $("#appbar").load("appbar.html");
         $("#bottombar").load("bottombar.html", function () {
             $(".bottom-bar").addClass('bottom-bar-button_active_1');
-
+        setAppHeight();
         });
         currentSlide(slideIndex);
         sessionStorage.setItem("global_gender", 0);
+        register_service_worker();
     });
 </script>

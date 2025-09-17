@@ -15,10 +15,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="global.css">
     <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="My App">
     <link rel="apple-touch-icon" href="ic_launcher.png">
+    <script src="global_js.js"></script>
 </head>
 
 <body>
@@ -58,13 +60,6 @@
 
 </html>
 <script>
-    function register_service_worker() {
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("./service-worker.js")
-                .then(reg => console.log("Service Worker registered:", reg))
-                .catch(err => console.log("SW registration failed:", err));
-        }
-    }
     document.addEventListener("DOMContentLoaded", function () {
         if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
             document.getElementById("allowed-content").style.display = "block";
