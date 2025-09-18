@@ -17,16 +17,18 @@
         rel="stylesheet">
     <link rel="stylesheet" href="global.css">
     <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="My App">
+    <link rel="apple-touch-icon" href="ic_launcher.png">
 </head>
 
 <body>
-       <div class="d-flex flex-column">
-            <div id="appbar"></div>
-    <div id="content">
-    </div>
-    <div id="bottombar"></div>
 
-       </div>
+
+    <div id="content" class="d-flex flex-column"></div>
+
 </body>
 
 </html>
@@ -51,10 +53,5 @@
         else {
             $("#content").load("results_negative.html");
         }
-        $("#appbar").load("appbar.html");
-        $("#bottombar").load("bottombar.html", function () {
-            $(".bottom-bar").addClass('bottom-bar-button_active_2');
-
-        });
     });
 </script>

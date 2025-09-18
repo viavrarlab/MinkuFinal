@@ -17,13 +17,18 @@
         rel="stylesheet">
     <link rel="stylesheet" href="global.css">
     <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="My App">
+    <link rel="apple-touch-icon" href="ic_launcher.png">
 </head>
 
 <body>
     <div id="appbar"></div>
-    <div id="content">
-        <div class="slideshow-container d-flex flex-column align-items-center">
-            <div class="upper-text">
+    <div id="content" class="d-flex flex-column">
+        <div class="slideshow-container whatsapp-container d-flex flex-column align-items-center">
+            <div class="upper-text" style="padding: 5% 10% 0% 10%;">
                 <p>Pievienojies Minku app
                     Whatsapp grupai!</p>
             </div>
@@ -31,25 +36,25 @@
                 <img class="background-vector" src="minku_vector.svg">
                 <div class="minku-whatsapp-logo"><img src="whatsapp_logo.svg"></div>
             </div>
-            <div style="text-align: center;">
+            <div style="text-align: center; padding: 5% 10% 0% 10%;">
                 <p class="p-small p-bold" style="color:#8418c8">Pievienojies mūsu Whatsapp grupai!</p>
                 <p class="p-small" style="line-height: 20px;">
                     Grupa vecākiem un speciālistiem bērna stājas mērīšanas lietotnes lietošanai – padomi, atgādinājumi
                     un atbalsts bērna stājas uzlabošanai.
                 </p>
             </div>
-                        <div class="d-flex flex-column">
-                <div class="p-2 align-self-center" style="text-align:center">
+            <div class="d-flex flex-column align-items-center">
+                <div class="p-2" style="text-align:center;justify-items: center">
                     <button class="btn button-minku d-flex align-items-center justify-content-between"
-                        onclick="" id="minku-next" type="button">
+                        onclick="" id="minku-next" type="button" style="width: 100%;">
                         <div class="mx-1">Pievienoties</div><img src="add.svg">
                     </button>
                 </div>
             </div>
+                <div id="bottombar"></div>
         </div>
 
     </div>
-    <div id="bottombar"></div>
 
 
 </body>
