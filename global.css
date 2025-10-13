@@ -43,7 +43,7 @@
         }
 
         .mySlides {
-            padding: 4% 10% 0% 10%;
+            padding: 0% 10% 0% 10%;
         }
 
         .button-minku,
@@ -352,10 +352,15 @@
         }
 
         .minku-left-logo {
-            width: 139px;
+            max-width: 139px;
+            width: 100%;
         }
 
         @media only screen and (max-width: 500px) {
+            .minku-left-logo {
+                width: 90%;
+            }
+
             .minku-vector-container {
                 position: relative;
                 display: flex;
@@ -386,6 +391,10 @@
         }
 
         @media only screen and ((max-width: 440px) and (max-height: 800px)) {
+            .minku-left-logo {
+                width: 90%;
+            }
+
             .minku-vector-container {
                 position: relative;
                 display: flex;
@@ -449,6 +458,10 @@
         }
 
         @media only screen and ((max-width: 360px) and (max-height: 600px)) {
+            .minku-left-logo {
+                width: 90%;
+            }
+
             .minku-vector-container {
                 position: relative;
                 display: flex;
