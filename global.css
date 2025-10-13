@@ -39,7 +39,7 @@
         }
 
         .mySlides {
-            padding: 5% 10% 0% 10%;
+            padding: 4% 10% 0% 10%;
         }
 
         .button-minku,
@@ -115,10 +115,7 @@
         }
 
         .menu_button {
-            background: url('minku_menu.svg') no-repeat right center;
-            height: 32px;
-            width: 32px;
-            padding-right: 30px;
+            width: 80%;
         }
 
         #bottombar {
@@ -309,7 +306,7 @@
 
         .p-bold {
             font-family: DM Sans;
-            font-weight: 700 !important;
+            font-weight: 600 !important;
             font-style: Bold;
             font-size: 14px;
             line-height: 35px;
@@ -347,6 +344,7 @@
             color: #8418c8;
             font-size: 30px;
             text-align: center;
+            padding-top: 1rem;
         }
 
         .minku-left-logo {
@@ -442,7 +440,7 @@
             }
 
             .minku-left-logo {
-                width: 80px;
+                width: 100px;
             }
         }
 
