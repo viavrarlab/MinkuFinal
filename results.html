@@ -2,56 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Minku App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Minku App</title>
 
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="global.css">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="My App">
-    <link rel="apple-touch-icon" href="ic_launcher.png">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="My App">
+  <link rel="apple-touch-icon" href="ic_launcher.png">
 </head>
 
 <body>
 
 
-    <div id="content" class="d-flex flex-column"></div>
+  <div id="content" class="d-flex flex-column"></div>
 
 </body>
 
 </html>
-<script>
-    function get_results() {
-        const params = new URLSearchParams(window.location.search);
-        var results = JSON.parse(atob(params.get("results")));
-        let okValues = Object.values(results).map(axis => axis.ok);
-        for (let value of okValues) {
-            if (!value) {
-                return 0;
-                break;
-            }
-        }
-        return 1;
-    }
+<script type="module">
+  import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-    $(document).ready(function () {
-        if (get_results()) {
-            $("#content").load("results_positive.html");
+  const SUPABASE_URL = "https://vckwmjooutsjdjozjxqp.supabase.co";
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZja3dtam9vdXRzamRqb3pqeHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4Mzk1MzIsImV4cCI6MjA3NzQxNTUzMn0.nOBgvsTz_MzruouMGbSHIKkYVrL8mZkH1hjgGaEMSxU";
+  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  async function insertMessage() {
+        const params = new URLSearchParams(window.location.search);
+
+    var results = JSON.parse(atob(params.get("results")));
+    const { data, error } = await supabase
+      .from("posture_scans")
+      .insert([
+        {
+          front_head_axis_delta: results.frontHeadAxis.delta,
+          front_head_axis_ok: results.frontHeadAxis.ok,
+          front_shoulder_axis_delta: results.frontShoulderAxis.delta,
+          front_shoulder_axis_ok: results.frontShoulderAxis.ok,
+          front_knee_axis_delta: results.frontKneeAxis.delta,
+          front_knee_axis_ok: results.frontKneeAxis.ok,
+          front_hip_axis_delta: results.frontHipAxis.delta,
+          front_hip_axis_ok: results.frontHipAxis.ok,
+          side_axis_delta: results.sideAxis.delta,
+          side_axis_ok: results.sideAxis.ok,
+          back_axis_delta: results.backAxis.delta,
+          back_axis_ok: results.backAxis.ok,
+          back_shoulder_axis_delta: results.backShoulderAxis.delta,
+          back_shoulder_axis_ok: results.backShoulderAxis.ok,
+          back_knee_axis_delta: results.backKneeAxis.delta,
+          back_knee_axis_ok: results.backKneeAxis.ok,
+          back_hip_axis_delta: results.backHipAxis.delta,
+          back_hip_axis_ok: results.backHipAxis.ok,
+          scan_time: results.time,
+          user_agent: results.agent,
+          camera_settings: JSON.stringify(results.camera[0]),
+          media_devices: JSON.stringify(results.media),
+          age: sessionStorage.getItem("global_age"),
+          gender: sessionStorage.getItem("global_gender")
         }
-        else {
-            $("#content").load("results_negative.html");
-        }
-    });
+      ]);
+
+    if (error) {
+      console.error("Error inserting data:", error);
+    } else {
+      console.log("Inserted:", data);
+    }
+  }
+
+  insertMessage();
+</script>
+<script>
+  function getLocalTimestamp() {
+    const now = new Date();
+    const offsetMinutes = now.getTimezoneOffset();
+    const sign = offsetMinutes > 0 ? "-" : "+";
+    const pad = (num) => String(Math.floor(Math.abs(num))).padStart(2, "0");
+    const hours = pad(offsetMinutes / -60);
+    const minutes = pad(offsetMinutes % 60);
+    return now.toISOString().replace("Z", `${sign}${hours}:${minutes}`);
+  }
+  function get_results() {
+    const params = new URLSearchParams(window.location.search);
+    var results = JSON.parse(atob(params.get("results")));
+    console.log(results);
+    let okValues = Object.values(results).map(axis => axis.ok);
+    for (let value of okValues) {
+      if (!value) {
+        return 0;
+        break;
+      }
+    }
+    return 1;
+  }
+
+  $(document).ready(function () {
+    if (get_results()) {
+      $("#content").load("results_positive.html");
+    }
+    else {
+      $("#content").load("results_negative.html");
+    }
+  });
 </script>

@@ -193,6 +193,7 @@
     function check_age(t) {
         if (t.val()) {
             $("#minku-next").prop("disabled", false);
+            sessionStorage.setItem("global_age", t.val());
         }
         else {
             $("#minku-next").prop("disabled", true);
